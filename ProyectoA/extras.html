@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Director</title>
+
+    <style>
+        /* FONDO GENERAL */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+         background-color: rgba(82, 211, 113, 0.95);
+
+        }
+
+        /* BOTÓN SUPERIOR DERECHO */
+        .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: #0056b3;
+        }
+
+        /* TÍTULO */
+        .titulo-alumno {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin: 30px auto 10px;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .titulo-alumno h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        /* SUBTÍTULO */
+        .inicio {
+            text-align: center;
+            background-color: rgba(255,255,255,0.9);
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px auto 30px;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* CONTENEDOR TARJETAS */
+        .cajota {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+
+        /* TARJETAS */
+        .cajota > div {
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cajota > div:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cajota h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* BOTONES TARJETAS */
+        .cajota a {
+            display: inline-block;
+            background-color: rgba(249, 157, 9, 0.95);
+            color: white;
+            padding: 20px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cajota a:hover {
+            background-color: rgb(97, 9, 249);
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="btn-superior">
+    <a href="paginadmin.html">Pagina Principal</a>
+</div>
+
+
+<<div class="titulo-alumno">
+    <h1>Herramientas Adicionales</h1>
+    <img src="herra.jpg" alt="Icono" style="width:100px; height:100px;">
+</div>
+
+<div class="cajota">
+
+    <div>
+         <img src="cita.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Generar un Citatorio</h2>
+        <a href="citatorio.html">Entrar</a>
+       
+    </div>
+
+    <div>
+         <img src="reporte.jpg" alt="Icono" style="width:200px; height:150px;">
+        <h2>Generar un Reporte </h2>
+        <a href="reporte.html">Entrar</a>
+    </div>
+
+    <div>
+         <img src="asis.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Generar una Asistrencia/Inasistencia</h2>
+        <a href="inasistencia.html">Entrar</a>
+            </div>
+
+          <div>
+             <img src="boleta.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Imprimir boleta de calificaciones</h2>
+        <a href="boleta.php">Entrar</a>
+    </div>
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Reporte</title>
+    <style>
+
+        body {
+            /* Centra el formulario en la pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(136, 203, 229);
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            /* Estilos del contenedor principal */
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px; /* Ancho ajustado para un formulario típico */
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+
+        .campo-input, .campo-texto {
+            border: 2px solid yellow;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0 20px;
+            /* width: 100% menos padding y borde */
+            width: calc(100% - 24px); 
+            box-sizing: border-box; /* Asegura que el padding no añada ancho extra */
+            display: block; /* Ocupa todo el ancho disponible */
+        }
+
+        .campo-texto {
+            resize: vertical; /* Permite redimensionar solo verticalmente */
+            height: 80px;
+        }
+
+    
+        .boton-enviar {
+            background-color: rgba(249, 157, 9, 0.95);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .boton-enviar:hover {
+            background-color: rgba(249, 157, 9, 1);
+        }
+        
+      
+        .contenedor form:last-child input[type="submit"] {
+         
+            background-color: #007BFF; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .contenedor form:last-child input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+          .boton-regresar {
+    background-color: rgb(195, 46, 195);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+  .botonregresar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+  .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: lightgreen;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="btn-superior">
+    <a href="extras.html">Extras</a>
+</div>
+
+<div class="contenedor">
+    
+    <h2> Registro </h2>
+    
+    <form action="connerep.php" method="POST">
+        <input type="text" class="campo-input" name="nombre" placeholder="Nombre del Alumno" required>
+        <input type="text" class="campo-input" name="materia" placeholder="Materia" required>
+        <input type="text" class="campo-input" name="grupo" placeholder="Grupo" required>
+        <textarea class="campo-texto" name="motivo" placeholder="" required></textarea>
+        <button type="submit" class="boton-enviar">Registrar Reporte</button>
+    </form>
+    <form action="">
+           <a href="consurep.php">
+    <button type="button" class="boton-regresar">Consultar Reportes</button>
+
+       <a href="elirep.html">
+    <button type="button" class="botonregresar">Eliminar Reporte</button>
+    </form>
+   
+    
+</div>
+
+</body>
+</html>

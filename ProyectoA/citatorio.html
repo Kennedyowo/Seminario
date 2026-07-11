@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generar Reporte</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgb(136, 203, 229); 
+    }
+    .contenedor {
+      border: 5px solid #007BFF;
+      border-radius: 10px;
+      padding: 30px;
+      width: 380px; 
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .campo-input, .campo-texto {
+      border: 2px solid yellow;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      width: calc(100% - 24px);
+    }
+    .campo-texto {
+      resize: none;
+      height: 80px;
+    }
+    .boton-enviar {
+      background-color: rgba(249, 157, 9, 0.95);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s; 
+    }
+    .boton-enviar:hover {
+      background-color: rgba(249, 157, 9, 1); 
+    }
+    .boton-regresar {
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .boton-regresar:hover {
+      background-color: #0056b3;
+    }
+    .boton-regresar {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: #0056b3;
+        }
+  </style>
+</head>
+<body>
+    <div class="btn-superior">
+    <a href="paginaprof.html">Pagina principal</a>
+</div>
+
+  <div class="contenedor">
+    <h2>Registro de Citatorio</h2>
+    <form>
+      <input type="text" class="campo-input" name="grado" placeholder="Grado" required>
+      <input type="text" class="campo-input" name="grupo" placeholder="Grupo" required>
+      <input type="text" class="campo-input" name="nombre" placeholder="Nombre del Alumno" required>
+      <textarea class="campo-texto" name="motivo" placeholder="Motivo del Citatorio" required></textarea>
+      <input type="text" class="campo-input" name="hora" placeholder="Hora" required>
+      <input type="text" class="campo-input" name="dia" placeholder="Día" required>
+      <input type="text" class="campo-input" name="materia" placeholder="Materia" required>
+      <button type="submit" class="boton-enviar">Registrar Citatorio</button>
+    </form>
+    <form>
+        
+    <button type="button" class="boton-regresar">Consultar Reportes</button>
+    </form>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Director</title>
+
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(221, 229, 136);
+        }
+
+        
+        .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: lightgreen;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: red;
+        }
+
+   
+        .titulo-alumno {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin: 30px auto 10px;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .titulo-alumno h1 {
+            margin: 0;
+            color: #333;
+        }
+
+   
+        .inicio {
+            text-align: center;
+            background-color: rgba(255,255,255,0.9);
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px auto 30px;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+       
+        .cajota {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+
+        
+        .cajota > div {
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cajota > div:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cajota h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+
+        .cajota a {
+            display: inline-block;
+            background-color:rgba(249, 9, 9, 0.95); 
+            color: white;
+            padding: 20px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cajota a:hover {
+            background-color:rgba(9, 205, 249, 0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="btn-superior">
+    <a href="iniciosesion.html">Volver</a>
+</div>
+
+<div class="titulo-alumno">
+    <h1>Director</h1>
+    <img src="direc.png" alt="Icono" style="width:50px; height:50px;">
+</div>
+
+<div class="inicio">
+    <h2>Bienvenido Director</h2>
+</div>
+
+<div class="cajota">
+
+    <div>
+        <img src="regA.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Registrar Alumnos</h2>
+          
+        <a href="registroalum.html">Registro</a>
+       </div>
+
+    <div>
+        <img src="RegP.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Registrar Profesores </h2>
+        <a href="regisprof.html">Registro</a>
+    </div>
+
+    <div>
+        <img src="regcal.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Registrar calificaciones</h2>
+        <a href="rcalificaciones.html">Registro</a>
+       
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>

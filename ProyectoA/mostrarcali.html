@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Boleta de Calificaciones</title>
+    <style>/* CONTENEDOR DE LA TABLA */
+.tabla-contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.95);
+    border: 5px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* TÍTULO DE LA TABLA */
+.tabla-contenedor h2{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* TABLA */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* ENCABEZADOS */
+th{
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* CELDAS */
+td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* FILAS PARES */
+tr:nth-child(even){
+    background-color: #f2f8ff;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+tr:hover{
+    background-color: #d9ecff;
+    transition: .3s;
+}
+
+/* INFORMACIÓN DE LA BOLETA */
+.info-alumno{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.info-alumno strong{
+    color:#007BFF;
+}</style>
+</head>
+<body>
+
+<div class="tabla-contenedor">
+
+    <h2>Boleta de Calificaciones</h2>
+
+    <div class="info-alumno">
+        <strong>Alumno:</strong> Juan Pérez <br>
+        <strong>Grado:</strong> 2° "A"
+    </div>
+
+    <table>
+
+        <tr>
+            <th>Materia</th>
+            <th>1er Parcial</th>
+            <th>2do Parcial</th>
+            <th>3er Parcial</th>
+            <th>Promedio</th>
+        </tr>
+
+        <tr>
+            <td>Matemáticas</td>
+            <td>9</td>
+            <td>8</td>
+            <td>10</td>
+            <td>9.0</td>
+        </tr>
+
+        <tr>
+            <td>Español</td>
+            <td>8</td>
+            <td>9</td>
+            <td>9</td>
+            <td>8.7</td>
+        </tr>
+
+        <tr>
+            <td>Historia</td>
+            <td>10</td>
+            <td>9</td>
+            <td>10</td>
+            <td>9.7</td>
+        </tr>
+
+        <tr>
+            <td>Inglés</td>
+            <td>8</td>
+            <td>8</td>
+            <td>9</td>
+            <td>8.3</td>
+        </tr>
+
+        <tr>
+            <td>Educación Física</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10</td>
+            <td>10.0</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Inasistencias</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgb(136, 203, 229); 
+    }
+    .contenedor {
+      border: 5px solid #007BFF;
+      border-radius: 10px;
+      padding: 30px;
+      width: 380px; 
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .campo-input, .campo-select {
+      border: 2px solid yellow;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0 20px;
+      width: calc(100% - 24px);
+    }
+    .boton-enviar {
+      background-color: rgba(249, 157, 9, 0.95);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s; 
+    }
+    .boton-enviar:hover {
+      background-color: rgba(249, 157, 9, 1); 
+    }
+    .boton-regresar {
+      margin-top: 10px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .boton-regresar:hover {
+      background-color: #0056b3;
+    }
+    .opciones-radio {
+      margin: 10px 0 20px;
+    }
+    .botonregresar {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+  .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: lightgreen;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: red;
+        }
+  </style>
+</head>
+<body>
+  <div class="btn-superior">
+    <a href="extras.html">Extras</a>
+</div>
+
+  <div class="contenedor">
+    <h2>Registro de Asistencias/Inasistencias</h2>
+    <form action="inacon.php" method="POST">
+      
+      <input type="text" class="campo-input" name="nombre" placeholder="Nombre del Alumno" required>
+
+      <label>¿Asistió el alumno?</label>
+      <div class="opciones-radio">
+        <label><input type="radio" name="asistencia" value="Sí" required> Sí</label><br>
+        <label><input type="radio" name="asistencia" value="No"> No</label>
+      </div>
+
+      <label>Materia:</label>
+      <select name="materia" class="campo-select" required>
+        <option value="">Selecciona la materia</option>
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Español">Español</option>
+        <option value="Inglés">Inglés</option>
+        <option value="Ciencias">Ciencias</option>
+        <option value="Historia">Historia</option>
+        <option value="Geografía">Geografía</option>
+        <option value="Educación Física">Educación Física</option>
+        <option value="Artes">Artes</option>
+      </select>
+
+      <label>Hora de inicio:</label>
+      <input type="time" class="campo-input" name="hora_inicio" required>
+
+      <label>Hora de fin:</label>
+      <input type="time" class="campo-input" name="hora_fin" required>
+
+      <label>Horas faltadas:</label>
+      <input type="number" class="campo-input" name="horas_faltadas" min="0" max="8" placeholder="Ej. 2" required>
+
+      <button type="submit" class="boton-enviar">Registrar Inasistencia</button>
+    </form>
+<form action="consuina.php" method="post">
+          <a href="consuina.php">
+    <button type="button" class="botonregresar">Consulta de Asistencias/Inasistencias</button>
+    </form>
+  </div>
+
+</body>
+</html>

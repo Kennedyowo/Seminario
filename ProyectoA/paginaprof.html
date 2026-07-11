@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Director</title>
+
+    <style>
+        /* FONDO GENERAL */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(136, 203, 229);
+        }
+
+        /* BOTÓN SUPERIOR DERECHO */
+        .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: rgb(240, 58, 58);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: red;
+        }
+
+        /* TÍTULO */
+        .titulo-alumno {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 15px 25px;
+            margin: 30px auto 10px;
+            width: fit-content;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .titulo-alumno h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        /* SUBTÍTULO */
+        .inicio {
+            text-align: center;
+            background-color: rgba(255,255,255,0.9);
+            border: 3px solid #007BFF;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 10px auto 30px;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* CONTENEDOR TARJETAS */
+        .cajota {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding-bottom: 40px;
+        }
+
+        /* TARJETAS */
+        .cajota > div {
+            background-color: rgba(255,255,255,0.95);
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cajota > div:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .cajota h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* BOTONES TARJETAS */
+        .cajota a {
+            display: inline-block;
+            background-color:rgba(249, 9, 9, 0.95); 
+            color: white;
+            padding: 20px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cajota a:hover {
+            background-color:rgba(9, 205, 249, 0.95);
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="btn-superior">
+    <a href="iniciosesion.html">Volver</a>
+</div>
+
+<div class="titulo-alumno">
+    <h1>Profesor</h1>
+    <img src="prof.png" alt="Icono" style="width:50px; height:50px;">
+</div>
+
+<div class="inicio">
+    <h2>Bienvenido Profesor</h2>
+</div>
+
+<div class="cajota">
+
+    <div>
+        <img src="regcal.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Registrar calificaciones</h2>
+           <a href="regcal.html">Registro</a>
+       </div>
+
+    <div>
+        <img src="horario.png" alt="Icono" style="width:200px; height:150px;">
+        <h2>Consultar horario </h2>
+        <a href="HorarioP.html">Registro</a>
+    </div>
+
+    <div>
+        <img src="report.png" alt="Icono" style="width:200px; height:150px;">
+        <h2> Generar reporte</h2>
+        <a href="citatorio.html">Registro</a>
+    </div>
+
+    <div>
+        <img src="asistencia.png" alt="Icono" style="width:200px; height:150px;">
+        <h2> Asitencia/Inacistencia</h2>
+        <a href="inancistencia.html">Registro</a>
+    </div>
+
+       
+    </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Alumno</title>
+    <style>
+/* FONDO Y CENTRADO GENERAL */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(117, 211, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    border: 5px solid #007BFF;
+    border-radius: 10px;
+    padding: 30px;
+    width: 380px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TÍTULO */
+.contenedor h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* INPUTS Y SELECT */
+.campo-input {
+    border: 2px solid yellow;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 20px;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+/* BOTÓN */
+.boton-enviar {
+    background-color: rgba(249, 157, 9, 0.95);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: rgba(249, 157, 9, 1);
+}
+
+/* IMAGEN SUPERIOR */
+.contenedor-imagen {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+}
+
+.contenedor-imagen img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #007BFF;
+    background-color: white;
+}
+.boton-regresar {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.boton-regresar:hover {
+    background-color: #0056b3;
+}
+   .btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+</head>
+<body>
+     <div class="btn-superior">
+    <a href="paginadmin.html">Pagina Principal</a>
+</div>
+    <div class="contenedor-imagen">
+       
+        
+    </div>
+    <div class="contenedor">
+        <h2>Registro de Alumno</h2>
+        <form action="regisalum.php" method="POST">
+            <label for="numero-control">Número de Control:</label>
+            <input type="text" id="numerocontrol" name="numerocontrol" class="campo-input" placeholder="Ejemplo: 20251234" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombrealumno" name="nombrealumno" class="campo-input" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" class="campo-input" required>
+
+            <label for="grupo">Grupo:</label>
+            <input type="text" id="grupo" name="grupo" class="campo-input" required>
+
+            <label for="ciclo-escolar">Ciclo Escolar:</label>
+            <input type="text" id="ciclo-escolar" name="cicloescolar" class="campo-input" required>
+
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno" class="campo-input" required>
+                <option value="" disabled selected>Selecciona un turno</option>
+                <option value="matutino">Matutino</option>
+                <option value="vespertino">Vespertino</option>
+            </select>
+
+             <button type="submit" class="boton-enviar">Registrar</button>
+            <a href="modificaralum.php">
+    <button type="button" class="boton-regresar">Modificar Alumno </button>
+    <a href="eliminaralum.php">
+    <button type="button" class="boton-regresar">Eliminar Alumno</button>
+    <a href="verlistas.php">
+    <button type="button" class="boton-regresar">Ver listas de Alumnos</button>
+    </div>
+</body>
+</html>

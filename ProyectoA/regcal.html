@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Calificaciones</title>
+    <style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(136, 203, 229);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contenedor {
+    border: 5px solid #007BFF;
+    border-radius: 10px;
+    padding: 30px;
+    width: 380px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.contenedor h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.campo-input {
+    border: 2px solid yellow;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 20px;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+
+.boton-enviar {
+    background-color: rgba(249, 157, 9, 0.95);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    transition: background-color 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: rgba(249, 157, 9, 1);
+}
+
+
+.contenedor-imagen {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+}
+
+.contenedor-imagen img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #007BFF;
+    background-color: white;
+}
+.boton-regresar {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.btn-superior {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .btn-superior a {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+
+        .btn-superior a:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+    </style>
+</head>
+<body>
+    <div class="btn-superior">
+    <a href="paginadirec.html">Pagina Principal</a>
+</div>
+    <div class="contenedor-imagen">
+       
+    </div>
+    <div class="contenedor">
+        <h2>Registro de Calificaciones</h2>
+     <form action="rcali.php" method="POST">
+            <label for="numero-control">Número de Control:</label>
+            <input type="text" id="numero-control" name="numerocontrol" class="campo-input" placeholder="Ej. 12345" required>
+
+            <label for="grado">Grado:</label>
+            <select id="grado" name="grado" class="campo-input" required>
+                <option value="" disabled selected>Selecciona un grado</option>
+                <option value="1">1°</option>
+                <option value="2">2°</option>
+                <option value="3">3°</option>
+            </select>
+
+            <label for="nombre-materia">Materia:</label>
+            <select id="nombre-materia" name="nombremateria" class="campo-input" required>
+                <option value="" disabled selected>Primero selecciona un grado</option>
+            </select>
+
+            <label for="calificacion">Calificación (1-10):</label>
+            <input type="number" id="calificacion" name="calificacion" class="campo-input" min="1" max="10" step="0.1" required>
+
+            <label for="grupo">Grupo:</label>
+            <select id="grupo" name="grupo" class="campo-input" required>
+                <option value="" disabled selected>Selecciona un grupo</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+
+            <label for="parcial">Parcial:</label>
+            <select id="parcial" name="parcial" class="campo-input" required>
+                <option value="" disabled selected>Selecciona el parcial</option>
+                <option value="1">1er Parcial</option>
+                <option value="2">2do Parcial</option>
+                <option value="3">3er Parcial</option>
+                <option value="ordinario">Examen Ordinario</option>
+            </select>
+
+            <label for="turno">Turno:</label>
+            <select id="turno" name="turno" class="campo-input" required>
+                <option value="" disabled selected>Selecciona un turno</option>
+                <option value="matutino">Matutino</option>
+                <option value="vespertino">Vespertino</option>
+            </select>
+
+            <label for="ciclo-escolar">Ciclo Escolar:</label>
+            <input type="text" id="ciclo-escolar" name="cicloescolar" class="campo-input" placeholder="Ejemplo: 2025-2026" required>
+  <button type="submit" class="boton-enviar">Registrar</button>
+            <a href="modificarcali.php">
+    <button type="button" class="boton-regresar">Modificar Calificaciones</button>
+
+      <a href="ccali.php">
+    <button type="button" class="boton-regresar">Consultar Calificaciones</button>
+        </form>
+    </div>
+
+    <script>
+     
+        const materiasPorGrado = {
+            "1": ["Español", "Matemáticas", "Química", "Historia", "F. Cívica y Ética", "Artes", "Inglés", "Tecnología"],
+            "2": ["Español", "Matemáticas", "Química", "Historia", "F. Cívica y Ética", "Artes", "Inglés", "Tecnología"],
+            "3": ["Español", "Matemáticas", "Química", "Historia", "F. Cívica y Ética", "Artes", "Inglés", "Tecnología"]
+        };
+
+        const selectGrado = document.getElementById("grado");
+        const selectMateria = document.getElementById("nombre-materia");
+
+       
+        function cargarMaterias(grado) {
+         
+            selectMateria.innerHTML = '<option value="" disabled selected>Selecciona una materia</option>';
+
+            if (grado && materiasPorGrado[grado]) {
+                materiasPorGrado[grado].forEach(materia => {
+                    const option = document.createElement("option");
+                    option.value = materia;
+                    option.textContent = materia;
+                    selectMateria.appendChild(option);
+                });
+            } else {
+                const option = document.createElement("option");
+                option.value = "";
+                option.textContent = "No hay materias disponibles";
+                option.disabled = true;
+                selectMateria.appendChild(option);
+            }
+        }
+
+    
+        selectGrado.addEventListener("change", function() {
+            cargarMaterias(this.value);
+        });
+
+       
+        window.addEventListener("load", function() {
+            if (selectGrado.value) {
+                cargarMaterias(selectGrado.value);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(119, 160, 240);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contenedor {
+            border: 5px solid #007BFF;
+            border-radius: 10px;
+            padding: 30px;
+            width: 380px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .campo-input {
+            border: 2px solid yellow;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0 20px;
+            width: calc(100% - 24px);
+            font-size: 16px;
+        }
+
+        .boton-enviar {
+            background-color: rgba(249, 157, 9, 0.95);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .boton-enviar:hover {
+            background-color: rgba(249, 157, 9, 1);
+        }
+
+        .imagen-login {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <h2>Inicio de Sesión</h2>
+
+         <img src="inicio.png" alt="Imagen de inicio de sesión" class="imagen-login">
+
+        <form onsubmit="login(event)">
+            <label>Nombre:</label>
+            <input type="text" id="nombre" class="campo-input" required>
+
+            <label>Rol:</label>
+            <input type="text" id="rol" class="campo-input" required>
+
+            <label>Contraseña:</label>
+            <input type="password" id="password" class="campo-input" required>
+
+            <button type="submit" class="boton-enviar">Entrar</button>
+        </form>
+    </div>
+
+<script>
+    function login(event) {
+        event.preventDefault();
+
+        const nombre = document.getElementById("nombre").value;
+        const rol = document.getElementById("rol").value;
+        const password = document.getElementById("password").value;
+
+        if (nombre === "direc" && rol === "administrador" && password === "1234") {
+            window.location.href = "paginadmin.html";
+        } else if (nombre === "maestro" && rol === "docente" && password === "5678") {
+            window.location.href = "paginaprof.html";
+        } else if (nombre === "alumno" && rol === "estudiante" && password === "abcd") {
+            window.location.href = "paginaalumn.html";
+        }else {
+            alert("Nombre, rol o contraseña incorrectos");
+        }
+    }
+</script>
+
+</body>
+</html>

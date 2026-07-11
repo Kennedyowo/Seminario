@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Horario Escolar</title>
+    <style>
+        /* CONTENEDOR DE LA TABLA */
+.tabla-contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: rgba(255,255,255,0.95);
+    border: 5px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* TÍTULO DE LA TABLA */
+.tabla-contenedor h2{
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* TABLA */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* ENCABEZADOS */
+th{
+    background-color: #007BFF;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* CELDAS */
+td{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+/* FILAS PARES */
+tr:nth-child(even){
+    background-color: #f2f8ff;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+tr:hover{
+    background-color: #d9ecff;
+    transition: .3s;
+}
+
+/* INFORMACIÓN DE LA BOLETA */
+.info-alumno{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.info-alumno strong{
+    color:#007BFF;
+}
+    </style>
+</head>
+<body>
+
+<div class="tabla-contenedor">
+
+    <h2>Horario Escolar</h2>
+
+    <table>
+        <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+
+        <tr>
+            <td>8:00 - 9:00</td>
+            <td>Matemáticas</td>
+            <td>Español</td>
+            <td>Historia</td>
+            <td>Matemáticas</td>
+            <td>Inglés</td>
+        </tr>
+
+        <tr>
+            <td>9:00 - 10:00</td>
+            <td>Inglés</td>
+            <td>Matemáticas</td>
+            <td>Biología</td>
+            <td>Geografía</td>
+            <td>Español</td>
+        </tr>
+
+        <tr>
+            <td>10:00 - 10:30</td>
+            <td colspan="5"><b>RECESO</b></td>
+        </tr>
+
+        <tr>
+            <td>10:30 - 11:30</td>
+            <td>Química</td>
+            <td>Educación Física</td>
+            <td>Matemáticas</td>
+            <td>Español</td>
+            <td>Historia</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>
